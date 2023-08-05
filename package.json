@@ -1,0 +1,23 @@
+{
+  "name": "dry-uninstall",
+  "version": "0.1.0",
+  "description": "Empty npm package to \"uninstall\" transitive dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denys-potapov/dry-uninstall.git"
+  },
+  "keywords": [
+    "npm",
+    "empty"
+  ],
+  "author": "Denys Potapov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denys-potapov/dry-uninstall/issues"
+  },
+  "homepage": "https://github.com/denys-potapov/dry-uninstall#readme"
+}
