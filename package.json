@@ -1,6 +1,6 @@
 {
   "name": "dry-uninstall",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Empty npm package to \"uninstall\" unused transitive dependencies",
   "main": "index.js",
   "scripts": {
