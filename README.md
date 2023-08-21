@@ -2,26 +2,43 @@
 
 Empty npm package to «uninstall» unused transitive dependencies.
 
- du -hs node_modules/
-11M	node_modules/
-Add it 
+Put it in `overrides` section to replace any package. If you want to remove `foo`
+package:
 
-To use it override inside napakce
+```json
+{
+  "overrides": {
+    "foo": "npm:dry-uninstall"
+  }
+}
+```
 
-It support nested and only nested for one dependency
+If you want to remove `bar` package at any depth beyond `foo`:
 
-[a relative link](sample/README.md)
+```json
+{
+  "overrides": {
+    "foo": {
+      "bar": "npm:dry-uninstall"
+    }
+  }
+}
+```
+
+See [documentation for overrides](https://docs.npmjs.com/cli/v9/configuring-npm/package-json?v=true#overrides) for full list of usage patterns. Or check the sample project [using simple-node-logger without momentjs](sample/README.md).
+
+
+### Reasoning
+
+1. **node_modules size**. In cases where tree-shaking does not work.  
+2. **Simplified Build**. There was a long time when installing `mongodb` required `kerberos` package. And `kerberos` required to build native addon modules, and it can be painfull.
+3. **Sequrity**. Replace the vulenrable packages, to be sure that the code is never used. 
+4. **License Issues**
 
 ### Inside
 
-This package is a 
+This package is a single file, that exports dict that can be safelly imported:
+
 ```javascript
 module.exports = {};
 ```
-
-## Reasoning
-
-1. node_modules folder size.
-2. Simplified Build (mongo + keras)
-3. License Issues
-4. Sequrity.  

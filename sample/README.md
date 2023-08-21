@@ -1,6 +1,6 @@
 # Using simple-node-logger without momentjs
 
-You've created a minimal project that uses [simple-node-logger][https://www.npmjs.com/package/simple-node-logger], simple multi-level logger for console and files:
+You've created a minimal project that uses [simple-node-logger](https://www.npmjs.com/package/simple-node-logger), simple multi-level logger for console and files:
 
 ```javascript
 // index.js
@@ -40,7 +40,6 @@ And override it in `package.json`
 
 ```json
 {
-  "...": "...",
   "dependencies": {
     "simple-node-logger": "^21.8.12"
   },
