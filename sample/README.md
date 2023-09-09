@@ -14,10 +14,11 @@ const log = manager.createLogger();
 log.info('this is a simplelog statement');
 ````
 
-#### Сheck the size of your dependencies
+#### Check the size of bundle (~383 kb)
 
-	$ du -hs node_modules/
-	11M	node_modules/
+    esbuild index.js --bundle --platform=node --outfile=index.dist.js
+    
+      index.dist.js  383.7kb
 
 ### Removing momentjs
 
@@ -49,7 +50,10 @@ And override it in `package.json`
 }
 ```
 
-#### Сheck new size of your dependencies
+#### Check the size of bundle (~241 kb)
 
-	$ du -hs node_modules/
-	5,1M	node_modules/
+    esbuild index.js --bundle --platform=node --outfile=index.dist.js
+    
+      index.dist.js  241.7kb
+
+Saved around 140 kb, not bad.
